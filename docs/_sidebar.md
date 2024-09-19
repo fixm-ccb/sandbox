@@ -7,7 +7,7 @@
 
 - **FIXM Encoding Guidance**
   - [*Flight Package*](topic1/intro.md)
-    - [fx:Aircraft](topic1/Example.md)
-    - [fx:Flight](topic1/Example.md)
+    - [fx:Aircraft](topic3/test_fx_Aircraft.md)
+    - [fx:Flight](topic3/test_fx_flight.md)
   - [*Base Package*](topic1/intro.md)
   - [*Other*](topic1/intro.md)
