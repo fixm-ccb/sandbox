@@ -2,7 +2,7 @@
 
 
 ```mermaid
-graph TD
+graph TB
 INITIAL_STATE(( ))
 END_STATE(( ))
 UNDER_DISCUSSION([Under Discussion])
