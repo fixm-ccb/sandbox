@@ -2,6 +2,7 @@
 
 
 ```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
 timeline
   title FIXM User Manual updates 
     2023 Q2 : The User Manual for 4.3.0 goes live
