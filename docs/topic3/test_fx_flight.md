@@ -3,10 +3,10 @@
 
 ```mermaid
 timeline
-        title FIXM User Manual updates 
-        section 2024 Q3 
-          Updates to General Section : corrected samples : new guidance for xyz               
-          Bullet 2 : sub-point 2a : sub-point 2b
-        section 2023 Q4
-          New section : data samples          
+  title FIXM User Manual updates 
+    2023 Q2 : The User Manual for 4.3.0 goes live
+    2023 Q4 : Added guidance on Performance Profile
+    2024 Q3 : Fixed bugs in XML snippets
+    2023 Q4 : Added FIXM Data samples : Reorganisation of the FIXM Encoding Guidance
+    Coming next : new guidance for Aircraft : new guidance for Flight
 ```
