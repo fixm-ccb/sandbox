@@ -11,9 +11,9 @@ timeline
     2024 Q3 : Fixed bugs in XML snippets
     2023 Q4 : Added FIXM Data samples
             : Reorganisation of the FIXM Encoding Guidance
-            : Added summary of FIXM Manual updates
+            : Added Update history
     Coming next : More data samples
-                : Additional guidance for packages Aircrat, Flight...
+                : Additional guidance for packages Aircraft, Flight...
 ```
 
 
