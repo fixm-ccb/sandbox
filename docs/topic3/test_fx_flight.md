@@ -4,7 +4,7 @@
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
 timeline
-  title FIXM User Manual updates 
+  title Update history
     2023 Q2 : The User Manual for 4.3.0 goes live
             : Includes Strategic Documents, Description of FIXM components, Encoding Guidance (general, FF-ICE, other), FIXM/ATS Mapping, Guidance for creating Applications/Extensions, Software compatibility matrix.
     2023 Q4 : Added guidance on Performance Profile
