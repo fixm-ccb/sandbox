@@ -1,5 +1,6 @@
 # Flight Guidance
 
+?> Last updated: `05-Nov-2024`
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
@@ -10,9 +11,9 @@ timeline
     2023 Q4 : Added guidance on Performance Profile
     2024 Q3 : Fixed bugs in XML snippets
     2023 Q4 : Added FIXM Data samples
-            : Reorganisation of the FIXM Encoding Guidance
-            : Added Update history
+            : Reorganisation of the FIXM Encoding Guidance            
     Coming next : More data samples
+                : More detailed Update history
                 : Additional guidance for packages Aircraft, Flight...
 ```
 
