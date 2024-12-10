@@ -6,15 +6,20 @@
 %%{init: { 'logLevel': 'debug', 'theme': 'forest' } }%%
 timeline
   title Update history
-    2023 Q2 : The User Manual for 4.3.0 goes live
-            : Includes Strategic Documents, Description of FIXM components, Encoding Guidance (general, FF-ICE, other), FIXM/ATS Mapping, Guidance for creating Applications/Extensions, Software compatibility matrix.
-    2023 Q4 : Added guidance on Performance Profile
-    2024 Q3 : Fixed bugs in XML snippets
-    2023 Q4 : Added FIXM Data samples
-            : Reorganisation of the FIXM Encoding Guidance            
+    2023 Q2 <br> Manual goes live 
+            : Strategic Documents
+            : Description of FIXM components
+            : Encoding Guidance (General,FF-ICE,...)
+            : FIXM/ATS Mapping
+            : Guidance for creating Applications/Extensions
+            : Software compatibility matrix
+    2023 Q4 <br> update: Added guidance on Performance Profile
+    2024 Q3 <br> update: Fixed bugs in XML snippets
+    2023 Q4 <br> update: Added FIXM Data samples
+                       : Reorganisation of the FIXM Encoding Guidance            
     Coming next : More data samples
-                : More detailed Update history
                 : Additional guidance for packages Aircraft, Flight...
+                : More detailed Update history 
 ```
 
 
