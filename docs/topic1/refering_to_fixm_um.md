@@ -1,14 +1,14 @@
-# Embedding references to the FIXM User Manual
+# References to the FIXM User Manual
 
-The FIXM User Manual provide encoding guidance for each of the FIXM Core properties. Implementers of information services or systems that use FIXM Core 
-may want to integrate references to relevant pieces of encoding guidance from this manual into their own service/system documentation, 
+The FIXM User Manual provide encoding guidance for the FIXM Core properties. Implementers of information services or systems that use FIXM 
+may decide to integrate references to relevant pieces of encoding guidance from this manual into their own service/system documentation, 
 for instance as part of the description of their information service payloads.
 
-This page explains how the URLs for the encoding guidance are formed, in order to facilitate this kind of integration.
+This page explains how the URLs for the encoding guidance of the FIXM User Manual are formed, in order to facilitate this type of integration.
 
 ## URL structure
 
-The URL for the encoding guidance is always structured as follows:
+The URLs for the encoding guidance are structured as follows:
 
 ```mermaid
 flowchart LR
@@ -32,40 +32,71 @@ PACKAGE_NAME --- ID
 ID --- MODEL_ELEMENT_NAME
 MODEL_ELEMENT_NAME --- END
 ```
-
-
-`[UM_URL]` + `/#/` + `[GUIDANCE_NAME]` + `/` + `[PACKAGE_NAME]` + `?id=` + `[PROPERTY_NAME]`
-
-
 where
 
 - *`[FIXM_UM_URL]`* shall take one of the following values 
-  - `https://docs.fixm.aero/#/`
-  - `https://docs-4-3-0.fixm.aero/#/`
+  - `https://docs.fixm.aero`
+    - IMPORTANT NOTE: When a new version of FIXM is released, a new version of the FIXM User Manual is deployed. `https://docs.fixm.aero` will always refer to the latest version of the FIXM User Manual. An implementer chosing `[FIXM_UM_URL]` = `https://docs.fixm.aero` run the risk of refering eventually to a version of the FIXM User Manual that no longer matches the version of FIXM being implemented. 
+  -   TODO : Should `https://docs-4-3-0.fixm.aero` be supported (and in the future `https://docs-4-4-0.fixm.aero` etc.), to enable the expression of URLs that are stable over time?
 
 - *`[GUIDANCE_NAME]`* shall take the value `general-guidance`
 
-- *`[PACKAGE_NAME]`* shall be the valid name of an official FIXM Core package, prefixed with the prefix of the namespace in which that package exists. The prefix and the package name shall be separated by `_`.
+- *`[PACKAGE_NAME]`* shall be the valid name of an official FIXM Core package, preceded by the prefix of the FIXM namespace in which that package exists. The prefix and the package name shall be separated by `_`.
   - Examples:
-    - `fx_Aircraft` for FIXM Core package `Aircraft` that exists in namespace `xmlns:fx="http://www.fixm.aero/flight/4.3"`
+    - `fx_FlightData` for FIXM Core package `FlightData` that exists in namespace `xmlns:fx="http://www.fixm.aero/flight/4.3"`
     - `fb_Address` for FIXM Core package `Address` that exists in namespace `xmlns:fb="http://www.fixm.aero/base/4.3"`  
 
 - *`[MODEL_ELEMENT_NAME]`*, if provided, shall be
   - for an `fx_` package, the valid name (as defined in UML) of a FIXM Core property defined in that package, in lower case
-    - Example: `aircraftidentification` for FIXM Core property `aircraftIdentification` defined in class `FlightIdentification` inside package `Aircraft`
-    - IMPORTANT NOTE: the name of the container class/type does not appear in the URL.
+    - Example: `aircraftidentification` for FIXM Core property `aircraftIdentification` defined in class `FlightIdentification` inside FIXM Core package `FlightData`
+    - IMPORTANT NOTE: the name of the container class does not appear in the URL.
   - for an `fb_` package, the valid name (as defined in UML) of a FIXM Core class defined in that package, in lower case
     - Example: `onlinecontact` for FIXM Core class/type `OnlineContact` defined inside package `Address`
 
 ## Examples
 
-https://docs.fixm.aero/#/general-guidance/fx_FlightData?id=aircraftidentification
-https://docs.fixm.aero/#/general-guidance/fb_Address?id=onlinecontact
+Reference to the latest version of the encoding guidance for property `aircraftIdentification` defined in class `FlightIdentification` inside FIXM Core (Flight) package `FlightData`
+- URL = `https://docs.fixm.aero/#/general-guidance/fx_FlightData?id=aircraftidentification`
+  - *`[FIXM_UM_URL]`* = `https://docs.fixm.aero`
+  - *`[GUIDANCE_NAME]`* = `general-guidance`
+  - *`[PACKAGE_NAME]`* = `fx_FlightData`
+  - *`[MODEL_ELEMENT_NAME]`* = `aircraftidentification`
 
-https://docs-4-2-0.fixm.aero/#/
+Reference to the latest version of the encoding guidance for class `OnlineContact` defined inside FIXM Core (Base) package `Address`
+- URL = `https://docs.fixm.aero/#/general-guidance/fb_Address?id=onlinecontact`
+  - *`[FIXM_UM_URL]`* = `https://docs.fixm.aero`
+  - *`[GUIDANCE_NAME]`* = `general-guidance`
+  - *`[PACKAGE_NAME]`* = `fb_Address`
+  - *`[MODEL_ELEMENT_NAME]`* = `onlinecontact`
 
-## Exceptions
+Reference to the latest version of the encoding guidance for FIXM Core (Flight) package `Aircraft` as a whole 
+- URL = `https://docs.fixm.aero/#/general-guidance/fx_Aircraft`
+  - *`[FIXM_UM_URL]`* = `https://docs.fixm.aero`
+  - *`[GUIDANCE_NAME]`* = `general-guidance`
+  - *`[PACKAGE_NAME]`* = `fx_Aircraft`
+
+Reference to the latest version of the encoding guidance for FIXM Core (Base) package `AeronauticalReference` as a whole 
+- URL = `https://docs.fixm.aero/#/general-guidance/fb_AeronauticalReference`
+  - *`[FIXM_UM_URL]`* = `https://docs.fixm.aero`
+  - *`[GUIDANCE_NAME]`* = `general-guidance`
+  - *`[PACKAGE_NAME]`* = `fb_AeronauticalReference`
+
+Reference to the encoding guidance for FIXM Core `4.3.0` (Flight) package `Aircraft` as a whole  (WARNING not resolvable yet)
+- URL = `https://docs-4-3-0.fixm.aero/#/general-guidance/fx_Aircraft`
+  - *`[FIXM_UM_URL]`* = `https://docs-4-3-0.fixm.aero`
+  - *`[GUIDANCE_NAME]`* = `general-guidance`
+  - *`[PACKAGE_NAME]`* = `fx_Aircraft`
 
 
+## Miscellaneous
+
+The objective of the FIXM User Manual is to provide encoding guidance for the entire content of FIXM. Developing this encoding guidance is an iterative process over several months, and it may happen 
+that, at a given point in time, some FIXM Core model elements do not have yet encoding guidance available in the FIXM User Manual. 
+
+It may therefore happen that a URL is formed in line with the rules above but featuring a *`[MODEL_ELEMENT_NAME]`* for which no encoding guidance is available, and used e.g. in a service/system documentation.
+
+This URL will however **remain resolvable** by mainstream web browsers, which will ignore the URL part `?id=...` and display the encoding guidance of the package at the top.
+
+FIXM implementers may therefore embed references to pieces of encoding guidance from the FIXM User Manual before that specific guidance is actually documented, provided the rules above for forming the URLs are satisfied. When the piece of guidance becomes available in the FIXM User Manual, the URLs will automatically point to the correct section of the user manual.
 
 
