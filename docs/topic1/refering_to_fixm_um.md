@@ -36,7 +36,7 @@ where
 
 - *`[FIXM_UM_URL]`* shall take one of the following values 
   - `https://docs.fixm.aero`
-    - IMPORTANT NOTE: When a new version of FIXM is released, a new version of the FIXM User Manual is deployed. `https://docs.fixm.aero` will always refer to the latest version of the FIXM User Manual. An implementer chosing `[FIXM_UM_URL]` = `https://docs.fixm.aero` run the risk of refering eventually to a version of the FIXM User Manual that no longer matches the version of FIXM being implemented. 
+    - IMPORTANT NOTE: When a new version of FIXM is released, a new version of the FIXM User Manual is deployed. `https://docs.fixm.aero` will always refer to the latest version of the FIXM User Manual. An implementer chosing `[FIXM_UM_URL]` = `https://docs.fixm.aero` runs the risk of refering eventually to a version of the FIXM User Manual that no longer matches the version of FIXM being implemented. 
   -   TODO : Should `https://docs-4-3-0.fixm.aero` be supported (and in the future `https://docs-4-4-0.fixm.aero` etc.), to enable the expression of URLs that are stable over time?
 
 - *`[GUIDANCE_NAME]`* shall take the value `general-guidance`
