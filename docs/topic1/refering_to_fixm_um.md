@@ -8,7 +8,7 @@ This page explains how the URLs for the encoding guidance of the FIXM User Manua
 
 ## URL structure
 
-The URLs for the encoding guidance are structured as follows:
+The URLs for the encoding guidance of the FIXM User Manual are structured as follows:
 
 ```mermaid
 flowchart LR
@@ -36,7 +36,7 @@ where
 
 - *`[FIXM_UM_URL]`* shall take one of the following values 
   - `https://docs.fixm.aero`
-    - IMPORTANT NOTE: When a new version of FIXM is released, a new version of the FIXM User Manual is deployed. `https://docs.fixm.aero` will always refer to the latest version of the FIXM User Manual. An implementer chosing `[FIXM_UM_URL]` = `https://docs.fixm.aero` runs the risk of refering eventually to a version of the FIXM User Manual that no longer matches the version of FIXM being implemented. 
+    - IMPORTANT NOTE: When a new version of FIXM is released, a new version of the FIXM User Manual is deployed. `https://docs.fixm.aero` will always refer to the latest version of the FIXM User Manual. An implementer using URLs with `[FIXM_UM_URL]` = `https://docs.fixm.aero` runs the risk of refering eventually to a version of the FIXM User Manual that no longer matches the version of FIXM being implemented. 
   -   TODO : Should `https://docs-4-3-0.fixm.aero` be supported (and in the future `https://docs-4-4-0.fixm.aero` etc.), to enable the expression of URLs that are stable over time?
 
 - *`[GUIDANCE_NAME]`* shall take the value `general-guidance`
@@ -45,6 +45,10 @@ where
   - Examples:
     - `fx_FlightData` for FIXM Core package `FlightData` that exists in namespace `xmlns:fx="http://www.fixm.aero/flight/4.3"`
     - `fb_Address` for FIXM Core package `Address` that exists in namespace `xmlns:fb="http://www.fixm.aero/base/4.3"`  
+  - Practically, the list of valid entries for *`[PACKAGE_NAME]`* are:
+    - For the `fx` namespace : `fx_Aircraft`, `fx_Arrival`, `fx_Capability`, `fx_Cargo`, `fx_Departure`, `fx_Emergency`, `fx_EnRoute`, `fx_FlightData`, `fx_RouteChanges`, `fx_RouteTrajectory`, `fx_Constraints`
+    - For the `fb` namespace: `fb_Address`, `fb_AeronauticalReference`, `fb_Measures`, `fb_Organization`, `fb_RangesAndChoices`, `fb_Types`
+
 
 - *`[MODEL_ELEMENT_NAME]`*, if provided, shall be
   - for an `fx_` package, the valid name (as defined in UML) of a FIXM Core property defined in that package, in lower case
@@ -90,11 +94,9 @@ Reference to the encoding guidance for FIXM Core `4.3.0` (Flight) package `Aircr
 
 ## Miscellaneous
 
-The objective of the FIXM User Manual is to provide encoding guidance for the entire content of FIXM. Developing this encoding guidance is an iterative process, and it may happen 
-that, at a given point in time, some FIXM Core model elements do not have yet encoding guidance available in the FIXM User Manual. 
+The objective of the FIXM User Manual is to provide encoding guidance for the entire content of FIXM. Developing this encoding guidance is an iterative process, and it is possible that,
+at a given point in time, some FIXM Core model elements do not have yet encoding guidance available in the FIXM User Manual. 
 
-It may therefore happen that a URL is formed that conforms to the rules above but that features a *`[MODEL_ELEMENT_NAME]`* for which no encoding guidance is available, and used e.g. in a third-party service/system documentation. This URL will however **remain resolvable** by mainstream web browsers, which will ignore the part of the URL `?id=...` and will display the encoding guidance of the package at the top.
-
-FIXM implementers might therefore embed references to pieces of encoding guidance from the FIXM User Manual before that specific guidance becomes available, provided the rules above for forming the URLs are satisfied. When the missing piece of guidance becomes available in the FIXM User Manual, the URLs will automatically point to the correct section of the User Manual.
+It may therefore happen that a URL is used in a third-party service/system documetation that conforms to the rules above, but that features a *`[MODEL_ELEMENT_NAME]`* for which no encoding guidance is available in the FIXM User Manual. Nevertheless, this URL will **remain resolvable** by mainstream web browsers, which will ignore the part of the URL `?id=...` and will display the top of the encoding guidance corresponding to the *`[PACKAGE_NAME]`*. When the missing piece of guidance becomes available in the FIXM User Manual, the URL will automatically point to the new correct section of the User Manual.
 
 
