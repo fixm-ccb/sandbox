@@ -1,6 +1,6 @@
 # References to the FIXM User Manual
 
-The FIXM User Manual provide encoding guidance for the FIXM Core properties. Implementers of information services or systems that use FIXM 
+The FIXM User Manual provides encoding guidance for the FIXM Core properties. Implementers of information services or systems that use FIXM 
 may decide to integrate references to relevant pieces of encoding guidance from this manual into their own service/system documentation, 
 for instance as part of the description of their information service payloads.
 
