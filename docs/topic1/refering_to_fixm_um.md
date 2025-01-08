@@ -90,7 +90,7 @@ Reference to the encoding guidance for FIXM Core `4.3.0` (Flight) package `Aircr
 
 ## Miscellaneous
 
-The objective of the FIXM User Manual is to provide encoding guidance for the entire content of FIXM. Developing this encoding guidance is an iterative process over several months, and it may happen 
+The objective of the FIXM User Manual is to provide encoding guidance for the entire content of FIXM. Developing this encoding guidance is an iterative process, and it may happen 
 that, at a given point in time, some FIXM Core model elements do not have yet encoding guidance available in the FIXM User Manual. 
 
 It may therefore happen that a URL is formed in line with the rules above but featuring a *`[MODEL_ELEMENT_NAME]`* for which no encoding guidance is available, and used e.g. in a service/system documentation.
