@@ -41,13 +41,17 @@ where
 
 - *`[GUIDANCE_NAME]`* shall take the value `general-guidance`
 
-- *`[PACKAGE_NAME]`* shall be the valid name of an official FIXM Core package, preceded by the prefix of the FIXM namespace in which that package exists. The prefix and the package name shall be separated by `_`.
+- *`[PACKAGE_NAME]`* shall be the valid name of an official FIXM Core or FIXM Application package, preceded by the prefix of the FIXM namespace in which that package exists. The prefix and the package name shall be separated by `_`. For a FIXM Application package, the version number of the FIXM Application should be added after the package name, preceded by `_` and with version digits separated by `-`.
   - Examples:
     - `fx_FlightData` for FIXM Core package `FlightData` that exists in namespace `xmlns:fx="http://www.fixm.aero/flight/4.3"`
-    - `fb_Address` for FIXM Core package `Address` that exists in namespace `xmlns:fb="http://www.fixm.aero/base/4.3"`  
+    - `fb_Address` for FIXM Core package `Address` that exists in namespace `xmlns:fb="http://www.fixm.aero/base/4.3"`
+    - `ffice_FficeMessage-1-1-0` for FIXM FF-ICE Message Application v1.1.0 package `FficeMessage` that exists in namespace `xmnls:ffice=http://www.fixm.aero/app/ffice/1.1`
+    - `msg_BasicMessage-1-1-0` for FIXM Basic Message Application v.1.0.0 package `BasicMessage` that exists in namespace `xmnls:msg=ttp://www.fixm.aero/app/msg/1.1`
   - Practically, the list of valid entries for *`[PACKAGE_NAME]`* are:
     - For the `fx` namespace : `fx_Aircraft`, `fx_Arrival`, `fx_Capability`, `fx_Cargo`, `fx_Departure`, `fx_Emergency`, `fx_EnRoute`, `fx_FlightData`, `fx_RouteChanges`, `fx_RouteTrajectory`, `fx_Constraints`
     - For the `fb` namespace: `fb_Address`, `fb_AeronauticalReference`, `fb_Measures`, `fb_Organization`, `fb_RangesAndChoices`, `fb_Types`
+    - For the `ffice` namespace: `ffice_FficeMessage-1-1-0`
+    - For the `msg` namespace: `msg_BasicMessage-1-1-0`
 
 
 - *`[MODEL_ELEMENT_NAME]`*, if provided, shall be
@@ -56,6 +60,8 @@ where
     - IMPORTANT NOTE: the name of the container class does not appear in the URL.
   - for an `fb_` package, the valid name (as defined in UML) of a FIXM Core class defined in that package, in lower case
     - Example: `onlinecontact` for FIXM Core class/type `OnlineContact` defined inside package `Address`
+  - for an `ffice_` or `msg_` package, the valid name (as defined in UML) of FIXM Application class defined in that package, in lower case
+    - Example: `filingstatus` for property `filingStatus` defined in class `FficeMessage` inside FIXM FF-ICE Message Application package `FficeMessage`
 
 ## Examples
 
